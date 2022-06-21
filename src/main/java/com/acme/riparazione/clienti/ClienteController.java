@@ -35,4 +35,7 @@ public class ClienteController {
 		} else {
 			return new ResponseEntity("Cliente id " + id + " non trovato ", HttpStatus.NOT_FOUND );
 		}
-
+		
+	}
+	
+}
