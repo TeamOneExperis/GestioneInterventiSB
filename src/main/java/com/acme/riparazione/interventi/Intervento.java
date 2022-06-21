@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.acme.riparazione.interventi;
 
 import com.acme.riparazione.rapportini.Rapportino;
@@ -23,3 +24,10 @@ public interface Intervento {
 
 
 }
+=======
+package com.acme.riparazione.interventi;
+
+public interface Intervento {
+
+}
+>>>>>>> refs/heads/Francesco
