@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public class InterventoAbstract {
+public class InterventoAbstract implements Intervento {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -36,6 +36,7 @@ public class InterventoAbstract {
 	
 	@ManyToOne
 	private Rapportino rapportinoId;
+	
 	
 
 }

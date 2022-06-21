@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public abstract class ClienteAbstract implements Citta{
+public abstract class ClienteAbstract{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
