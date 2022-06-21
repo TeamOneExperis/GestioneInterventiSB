@@ -1,5 +1,8 @@
 package com.acme.riparazione.clienti;
 
-public class Privato extends ClienteImp{
+import javax.persistence.Entity;
 
+@Entity
+public class Privato extends ClienteImp{
+	
 }
