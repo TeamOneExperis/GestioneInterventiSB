@@ -1,14 +1,29 @@
 -- CLASSI
-Tecnico(tecnicoId!, numeroTecnico, dati anagrafici, List<Rapportino>)
+Tecnico(tecnicoId!, 
+		  numeroTecnico, 
+		  datiAnagrafici, 
+		  List<Rapportino>)
 
-Cliente(clienteId!, indirizzo, nome, citta, List<Rapportino>)
+Cliente(clienteId!, 
+		  indirizzo, 
+		  nome, 
+		  citta, 
+		  List<Rapportino>)
 	
 	Azienda(P.IVA)
 	Privato(CF)
 	
-Rapportino(rapportino_id!, clienteId*, tecnicoId*, dataIntervento, numeroSeriale, List<Intervento>)
+Rapportino(rapportinoId!, 
+		  clienteId*, 
+		  tecnicoId*, 
+		  dataIntervento, 
+		  numeroSeriale, 
+		  List<Intervento>)
 
-Intervento(intervento_id!, descrizione, prezzo, rapportino_id*)
+Intervento(interventoId!,
+		  descrizione, 
+		  prezzo, 
+		  rapportinoId*)
 	
 	Riparazione
 	Sostituzioni(numeroDiPezzi)
