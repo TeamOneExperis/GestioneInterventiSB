@@ -1,0 +1,64 @@
+-- CLASSI
+Tecnico(tecnicoId!, numeroTecnico, dati anagrafici, List<Rapportino>)
+
+Cliente(clienteId!, indirizzo, nome, citta, List<Rapportino>)
+	
+	Azienda(P.IVA)
+	Privato(CF)
+	
+Rapportino(rapportino_id!, clienteId*, tecnicoId*, dataIntervento, numeroSeriale, List<Intervento>)
+
+Intervento(intervento_id!, descrizione, prezzo, rapportino_id*)
+	
+	Riparazione
+	Sostituzioni(numeroDiPezzi)
+	Verifica
+	
+	
+1 Repository X Classe
+
+Facoltativo Creare I Bean per la generazione della Singola Classe
+	
+Tecnico dto
+	
+	RequestBody -> InserimentoInterventoEffettuatoRequest(Class)
+					
+					numeroTecnico, dati anagrafici
+	
+					indirizzo, nome, citta (potra essere o Azienda o Privato)
+	
+					dataIntervento, numeroSeriale
+	
+					descrizione, prezzo
+					
+ServiziRest
+		
+	3 per la gestione delle chiamate Rest
+		
+Gestione della cancellazione al interno della tabella
+					
+					
+	
+	
+	
+	
+-- TABELLE DATABASE
+Tecnico(tecnicoId!, numeroTecnico, dati anagrafici)
+
+Cliente(clienteId!, indirizzo, nome, citta)
+	
+	Azienda(P.IVA)
+	Privato(CF)
+	
+Rapportino(rapportino_id!, clienteId*, tecnicoId*, dataIntervento, numeroSeriale)
+
+Intervento(intervento_id!, descrizione, prezzo, rapportino_id*)
+	
+	Riparazione
+	Sostituzioni(numeroDiPezzi)
+	Verifica
+	
+
+	
+	
+	
