@@ -17,6 +17,7 @@ import com.acme.riparazione.rapportini.Rapportino;
 import com.acme.riparazione.tecnici.Tecnico;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -26,6 +27,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Builder
 public class InterventoAbstract implements Intervento {
 	
 	@Id

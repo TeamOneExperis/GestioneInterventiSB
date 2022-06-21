@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 package com.acme.riparazione.interventi;
 
-public class Verifica extends InterventoImp {
+import javax.persistence.Entity;
+
+@Entity
+public class Verifica extends InterventoAbstract {
 
 }
-=======
-package com.acme.riparazione.interventi;
-
-public class Verifica extends InterventoImp {
-
-}
->>>>>>> refs/heads/Francesco

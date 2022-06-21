@@ -1,13 +1,17 @@
-<<<<<<< HEAD
 package com.acme.riparazione.interventi;
 
-public class Sostituzione extends InterventoImp {
+import javax.persistence.Entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class Sostituzione extends InterventoAbstract {
+	
+	private int numeroDiPezzi;
 
 }
-=======
-package com.acme.riparazione.interventi;
-
-public class Sostituzione extends InterventoImp {
-
-}
->>>>>>> refs/heads/Francesco

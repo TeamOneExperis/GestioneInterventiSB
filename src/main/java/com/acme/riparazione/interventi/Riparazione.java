@@ -1,13 +1,14 @@
-<<<<<<< HEAD
 package com.acme.riparazione.interventi;
 
-public class Riparazione extends InterventoImp {
+import javax.persistence.Entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@Entity
+public class Riparazione extends InterventoAbstract {
 
 }
-=======
-package com.acme.riparazione.interventi;
-
-public class Riparazione extends InterventoImp {
-
-}
->>>>>>> refs/heads/Francesco
