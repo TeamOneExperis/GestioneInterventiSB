@@ -1,5 +1,12 @@
 package com.acme.riparazione.interventi;
 
-public class Sostituzione extends InterventoImp {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class Sostituzione extends InterventoImp {
+	private int numeroPezzi;
 }

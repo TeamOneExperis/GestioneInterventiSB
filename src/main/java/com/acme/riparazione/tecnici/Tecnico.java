@@ -11,12 +11,22 @@ import javax.persistence.Table;
 
 import com.acme.riparazione.rapportini.Rapportino;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+
 @Entity
 @Table(name = "tecnici")
 public class Tecnico {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	private String nomeTecnico;
+	private String cognomeTecnico;
 	
 	@OneToMany(mappedBy = "tecnico")
 	private List<Rapportino> rapportini;

@@ -1,5 +1,12 @@
 package com.acme.riparazione.interventi;
 
-public class Verifica extends InterventoImp {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class Verifica extends InterventoImp {
+	private int anno;
 }
