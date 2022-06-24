@@ -7,3 +7,4 @@ public interface VerificaRepository extends PagingAndSortingRepository<Verifica,
 	
 	
 }
+
