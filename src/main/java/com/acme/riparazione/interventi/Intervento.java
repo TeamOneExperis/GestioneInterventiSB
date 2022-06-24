@@ -21,5 +21,4 @@ public interface Intervento {
 
 	void setRapportinoId(Rapportino rapportinoId);
 
-
 }

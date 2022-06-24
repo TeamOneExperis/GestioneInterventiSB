@@ -27,8 +27,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-@Builder
-public class InterventoAbstract implements Intervento {
+public abstract class InterventoAbstract implements Intervento {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
