@@ -13,6 +13,7 @@ import javax.persistence.Table;
 import com.acme.riparazione.clienti.ClienteImp;
 import com.acme.riparazione.interventi.InterventoImp;
 import com.acme.riparazione.tecnici.Tecnico;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -32,10 +33,11 @@ public class Rapportino {
 	private String numeroSeriale;
 	
 	
-	
+	@JsonIgnoreProperties({"rapportini"})
 	@ManyToOne
 	private ClienteImp cliente;
 	
+	@JsonIgnoreProperties({"rapportini"})
 	@ManyToOne
 	private Tecnico tecnico;
 	

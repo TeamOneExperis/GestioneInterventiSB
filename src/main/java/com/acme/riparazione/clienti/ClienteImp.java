@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.acme.riparazione.rapportini.Rapportino;
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -32,7 +32,7 @@ public abstract class ClienteImp implements Cliente{
 	private String citta;
 	private String indirizzo;
 	
-	
+	@JsonIgnoreProperties({"cliente"})
 	@OneToMany(mappedBy = "cliente")
 	private List<Rapportino> rapportini;
 	

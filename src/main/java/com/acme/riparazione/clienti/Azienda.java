@@ -2,6 +2,7 @@ package com.acme.riparazione.clienti;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 import com.acme.riparazione.rapportini.Rapportino;
@@ -15,6 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 public class Azienda extends ClienteImp{
+	@Column(unique = true)
 	private String partitaIva;
 
 	public Azienda(long id, String nomeCliente, String citta, String indirizzo, List<Rapportino> rapportini,
