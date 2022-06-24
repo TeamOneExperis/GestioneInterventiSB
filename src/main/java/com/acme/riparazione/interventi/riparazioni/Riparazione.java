@@ -1,8 +1,9 @@
-package com.acme.riparazione.interventi;
+package com.acme.riparazione.interventi.riparazioni;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import com.acme.riparazione.interventi.InterventoAbstract;
 import com.acme.riparazione.rapportini.Rapportino;
 
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package com.acme.riparazione.interventi;
+package com.acme.riparazione.interventi.riparazioni;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,43 +14,46 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @RestController
-@RequestMapping("/sostituzione")
-public class SostituzioneController {
+@RequestMapping("/riparazione")
+public class RiparazioneController {
 	
 	@Autowired
-	private SostituzioneRepository sostituzioneRepository;
+	private RiparazioneRepository riparazioneRepository;
 	
 	@GetMapping
-	public ResponseEntity<?> getSostituzioni(){
+	public ResponseEntity<?> getRiparazioni(){
 		
-		return ResponseEntity.ok(sostituzioneRepository.findAll()); 
+		return ResponseEntity.ok(riparazioneRepository.findAll()); 
 		
 	}
 	
 	@PostMapping
-	public ResponseEntity<?> insertSostituzione(@RequestBody Sostituzione sostituzione ){
-		return ResponseEntity.ok(sostituzioneRepository.save(sostituzione));
+	public ResponseEntity<?> insertRiparazioni(@RequestBody Riparazione riparazione ){
+		return ResponseEntity.ok(riparazioneRepository.save(riparazione));
 	}
 	
 	@PutMapping("/${id}")
-	public ResponseEntity<?> updateSostituzione(@RequestBody Sostituzione sostituzione, @PathVariable long id){
+	public ResponseEntity<?> updateRiparazioni(@RequestBody Riparazione riparazione, @PathVariable long id){
 		
-		Sostituzione sostituzione2 = sostituzioneRepository.findById(id).get();
+		Riparazione riparazione2 = riparazioneRepository.findById(id).get();
 
-		BeanUtils.copyProperties(sostituzione, sostituzione2);
+		BeanUtils.copyProperties(riparazione, riparazione2);
 		
-		sostituzioneRepository.save(sostituzione2);
+		riparazioneRepository.save(riparazione2);
 		
 		return ResponseEntity.ok("aggiornamento effettuato");		
 	}
 	
 	@DeleteMapping("/${id}")
-	public ResponseEntity<?> removeSostituzione(@PathVariable long id){
+	public ResponseEntity<?> removeRiparazioni(@PathVariable long id){
 		
-		sostituzioneRepository.deleteById(id);
+		riparazioneRepository.deleteById(id);
 		
 		return ResponseEntity.ok("eliminazione effettuata");
 	}
 	
-
+	
+	
+	
+	
 }

@@ -4,6 +4,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+import com.acme.riparazione.interventi.riparazioni.Riparazione;
+import com.acme.riparazione.interventi.sostituzioni.Sostituzione;
+import com.acme.riparazione.interventi.verifiche.Verifica;
 import com.github.javafaker.Faker;
 
 @Configuration

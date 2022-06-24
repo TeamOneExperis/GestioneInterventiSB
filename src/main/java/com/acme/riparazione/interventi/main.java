@@ -1,5 +1,7 @@
 package com.acme.riparazione.interventi;
 
+import com.acme.riparazione.interventi.sostituzioni.Sostituzione;
+
 public class main {
 
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.acme.riparazione.interventi;
+package com.acme.riparazione.interventi.sostituzioni;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 
