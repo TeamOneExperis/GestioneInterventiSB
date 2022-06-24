@@ -27,9 +27,9 @@ public abstract class ClienteAbstract implements Cliente{
 	private String indirizzo;
 	private String citta;
 
-
+/*
 	@ToString.Exclude
  	private List<Rapportino> rapportino;
 	
-	
+*/	
 }
