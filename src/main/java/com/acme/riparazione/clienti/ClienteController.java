@@ -7,33 +7,70 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
+import com.acme.riparazione.clienti.aziende.AziendaRepository;
+import com.acme.riparazione.clienti.privati.PrivatoRepository;
 
 @RestController
 @RequestMapping("/clienti")
 public class ClienteController {
-	
+
 	@Autowired
-	private ClienteRepository clientRepo;
+	private AziendaRepository aziendaRepo;
+
+	@Autowired
+	private PrivatoRepository privatoRepo;
+
+	@Autowired
+	private ClienteRepository clienteRepo;
+
+	@Autowired
+	ClienteService clienteService;
 	
+	
+
 	@GetMapping("/pagato")
-	public void getClientiCheHannoPagato() {}
-	
+	public void getClientiCheHannoPagato() {
+	}
+
 	@GetMapping("/{clienteId}")
-	public  ResponseEntity<?>  getUtente(@PathVariable  long id) {
+	public  ResponseEntity<?>  getCliente(@PathVariable  long id) {
 		
-		if( clientRepo.existsById(id)) {
-			Optional<Cliente> c =  clientRepo.findById(id);
-			//return new ResponseEntity(u, HttpStatus.OK);
+		if (clienteRepo.existsById(id)) {
+			
+			Optional<ClienteAbstract> c = clienteRepo.findById(id);
 			
 			return ResponseEntity.ok(c);
 			
 		} else {
-			return new ResponseEntity("Cliente id " + id + " non trovato ", HttpStatus.NOT_FOUND );
+			
+			return new ResponseEntity("Cliente"+ id + "non trovato" , HttpStatus.NOT_FOUND);
+			
+			
 		}
-		
+
+		}
+	
+	
+
+	@PostMapping("/acme")
+	public ResponseEntity<?> inserisciCliente(@RequestBody InserimentoAziendaRequest dto) {
+
+		clienteService.inserisciCliente(dto);
+		return ResponseEntity.ok("Azienda");
 	}
+
+	@PostMapping
+	public ResponseEntity<?> inserisciCliente(@RequestBody InserimentoPrivatiRequest dto) {
+
+		clienteService.inserisciCliente(dto);
+		return ResponseEntity.ok("Privato");
+	}
+
+
+
 }
