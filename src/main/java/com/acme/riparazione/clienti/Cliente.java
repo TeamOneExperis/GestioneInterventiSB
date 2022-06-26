@@ -1,5 +1,11 @@
 package com.acme.riparazione.clienti;
 
+import java.util.List;
+
+import com.acme.riparazione.rapportini.Rapportino;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+
 public interface Cliente {
 
 	String getCitta();
@@ -12,6 +18,8 @@ public interface Cliente {
 
 	String getNome();
 
+	List<Rapportino> getRapportini();
+
 	void setCitta(String citta);
 
 	void setCognome(String cognome);
@@ -22,5 +30,6 @@ public interface Cliente {
 
 	void setNome(String nome);
 
-}
+	void setRapportini(List<Rapportino> rapportini);
 
+}

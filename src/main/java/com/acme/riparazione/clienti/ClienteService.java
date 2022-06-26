@@ -1,6 +1,9 @@
 package com.acme.riparazione.clienti;
 
+
 import com.acme.riparazione.clienti.aziende.Azienda;
+import com.acme.riparazione.clienti.aziende.InserimentoAziendaRequest;
+import com.acme.riparazione.clienti.privati.InserimentoPrivatiRequest;
 import com.acme.riparazione.clienti.privati.Privato;
 
 public interface ClienteService {

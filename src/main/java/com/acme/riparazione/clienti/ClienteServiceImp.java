@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 
 import com.acme.riparazione.clienti.aziende.Azienda;
 import com.acme.riparazione.clienti.aziende.AziendaRepository;
+import com.acme.riparazione.clienti.aziende.InserimentoAziendaRequest;
+import com.acme.riparazione.clienti.privati.InserimentoPrivatiRequest;
 import com.acme.riparazione.clienti.privati.Privato;
 import com.acme.riparazione.clienti.privati.PrivatoRepository;
 
