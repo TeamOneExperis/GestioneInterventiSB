@@ -10,8 +10,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.acme.riparazione.clienti.ClienteImp;
-import com.acme.riparazione.interventi.InterventoImp;
+import com.acme.riparazione.clienti.ClienteAbstract;
+import com.acme.riparazione.interventi.InterventoAbstract;
 import com.acme.riparazione.tecnici.Tecnico;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -35,14 +35,14 @@ public class Rapportino {
 	
 	@JsonIgnoreProperties({"rapportini"})
 	@ManyToOne
-	private ClienteImp cliente;
+	private ClienteAbstract cliente;
 	
 	@JsonIgnoreProperties({"rapportini"})
 	@ManyToOne
 	private Tecnico tecnico;
 	
 	@OneToMany
-	private List<InterventoImp> interventi;
+	private List<InterventoAbstract> interventi;
 	
 	
 }
