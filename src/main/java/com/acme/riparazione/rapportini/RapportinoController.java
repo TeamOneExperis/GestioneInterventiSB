@@ -45,8 +45,8 @@ public class RapportinoController {
 		Rapportino rapportino = new Rapportino();
 		Tecnico tecnico;
 		
-		if(tecnicoRepository.existsByCodiceFiscaleTecnico(dto.getCodiceFiscale())) {
-			tecnico = tecnicoRepository.findByCodiceFiscaleTecnico(dto.getCodiceFiscale());
+		if(tecnicoRepository.existsByCodiceFiscaleTecnico(dto.getCodiceFiscaleTecnico())) {
+			tecnico = tecnicoRepository.findByCodiceFiscaleTecnico(dto.getCodiceFiscaleTecnico());
 			System.out.println("sono dentro l'if tecnico");
 		}
 		else {

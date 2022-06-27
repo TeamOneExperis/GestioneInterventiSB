@@ -18,12 +18,12 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Privato extends ClienteImp{
 	@Column(unique = true)
-	private String codiceFiscale;
+	private String codiceFiscalePrivato;
 
 	public Privato(long id, String nomeCliente, String citta, String indirizzo, List<Rapportino> rapportini,
-			String codiceFiscale) {
+			String codiceFiscalePrivato) {
 		super(id, nomeCliente, citta, indirizzo, rapportini);
-		this.codiceFiscale = codiceFiscale;
+		this.codiceFiscalePrivato = codiceFiscalePrivato;
 	}
 	
 	

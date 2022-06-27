@@ -18,8 +18,8 @@ public class InserisciTestaRapportinoRequest {
 	private String nomeCliente;
 	private String citta;
 	private String indirizzo;
-	private String codiceFiscale;
 	private String partitaIva;
+	private String codiceFiscalePrivato;
 	
 	//realtivo al rapportino
 	private String data;
