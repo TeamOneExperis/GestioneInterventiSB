@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AziendaRepository extends PagingAndSortingRepository<Azienda, Long> {
 	
-	public Azienda findByPIva(String codice);
-	public boolean existsByPIva(String codice);
+	public Azienda findByPiva(String codice);
+	public boolean existsByPiva(String codice);
 
 }

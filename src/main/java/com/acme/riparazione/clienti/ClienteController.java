@@ -12,26 +12,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.acme.riparazione.clienti.aziende.AziendaRepository;
 import com.acme.riparazione.clienti.aziende.InserimentoAziendaRequest;
 import com.acme.riparazione.clienti.privati.InserimentoPrivatiRequest;
-import com.acme.riparazione.clienti.privati.PrivatoRepository;
 
 @RestController
 @RequestMapping("/clienti")
 public class ClienteController {
 
 	@Autowired
-	private AziendaRepository aziendaRepo;
-
-	@Autowired
-	private PrivatoRepository privatoRepo;
-
-	@Autowired
 	private ClienteRepository clienteRepo;
 
 	@Autowired
-	ClienteService clienteService;
+	ClienteServiceImp clienteService;
 	
 	
 

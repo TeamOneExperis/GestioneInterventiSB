@@ -7,7 +7,7 @@ import com.acme.riparazione.clienti.aziende.Azienda;
 @Repository
 public interface PrivatoRepository extends PagingAndSortingRepository<Privato, Long> {
 	
-	public Privato findByCF(String codice);
-	public boolean existsByCF(String codice);
+	public Privato findByCf(String codice);
+	public boolean existsByCf(String codice);
 
 }

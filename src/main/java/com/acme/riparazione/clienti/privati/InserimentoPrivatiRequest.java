@@ -13,6 +13,6 @@ public class InserimentoPrivatiRequest {
 	private String cognome;
 	private String indirizzo;
 	private String citta;
-	private String CF;
+	private String cf;
 
 }

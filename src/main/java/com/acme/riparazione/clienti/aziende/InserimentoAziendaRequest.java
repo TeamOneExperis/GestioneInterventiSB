@@ -13,7 +13,7 @@ public class InserimentoAziendaRequest {
 	private String cognome;
 	private String indirizzo;
 	private String citta;
-	private String pIva;
+	private String piva;
 
 
 }

@@ -22,9 +22,9 @@ public class ClienteServiceImp implements ClienteService {
 
 		Azienda a;
 		
-		if ( aziendaRepo.existsByPIva(dto.getPIva()) ) {
+		if ( aziendaRepo.existsByPiva(dto.getPiva()) ) {
 			
-			a = aziendaRepo.findByPIva(dto.getPIva());
+			a = aziendaRepo.findByPiva(dto.getPiva());
 			
 		} else {
 			
@@ -43,9 +43,9 @@ public class ClienteServiceImp implements ClienteService {
 		
 		Privato p;
 		
-		if ( privatoRepo.existsByCF(dto.getCF()) ) {
+		if ( privatoRepo.existsByCf(dto.getCf()) ) {
 			
-			p = privatoRepo.findByCF(dto.getCF());
+			p = privatoRepo.findByCf(dto.getCf());
 			
 		} else {
 			
