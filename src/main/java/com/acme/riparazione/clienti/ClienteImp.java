@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "clienti")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public abstract class ClienteImp implements Cliente{
+public abstract class ClienteImp {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
