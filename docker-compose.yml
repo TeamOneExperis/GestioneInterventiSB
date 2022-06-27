@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment: 
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=wolowaza96
+      - POSTGRES_DB=riparazioni
+    ports:
+      - '5432:5432'
+    volumes:
+      - db:/var/lib/postgresql/data
+  app:
+    depends_on:
+      - db
+    build: ./
+    restart: on-failure
+    ports:
+      - '8080:8080'
+    environment:
+      SPRING_APPLICATION_JSON: '{
+        "spring.jpa.properties.hibernate.dialect":"org.hibernate.dialect.PostgreSQL92Dialect",
+        "spring.datasource.url":"jdbc:postgresql://db:5432/riparazioni",
+        "spring.datasource.username":"postgres",
+        "spring.datasource.password":"wolowaza96",
+        "spring.datasource.driverClassName":"org.postgresql.Driver",
+        "spring.jpa.hibernate.ddl-auto":"create"
+        
+        }'
+    volumes:
+      - .m2:/root/.m2
+    stdin_open: true
+    tty: true
+
+volumes: 
+  db: 

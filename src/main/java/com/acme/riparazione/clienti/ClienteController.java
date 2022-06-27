@@ -27,7 +27,7 @@ public class ClienteController {
 	
 	
 
-	@GetMapping("/pagato")
+	@GetMapping("/paganti")
 	public void getClientiCheHannoPagato() {
 	}
 
@@ -51,14 +51,14 @@ public class ClienteController {
 	
 	
 
-	@PostMapping("/acme")
+	@PostMapping("/aziende")
 	public ResponseEntity<?> inserisciCliente(@RequestBody InserimentoAziendaRequest dto) {
 
 		clienteService.inserisciCliente(dto);
 		return ResponseEntity.ok("Azienda");
 	}
 
-	@PostMapping
+	@PostMapping("/privati")
 	public ResponseEntity<?> inserisciCliente(@RequestBody InserimentoPrivatiRequest dto) {
 
 		clienteService.inserisciCliente(dto);
